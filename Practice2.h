@@ -42,3 +42,60 @@ public:
 	double peri(Location loc1, Location loc2, Location loc3);
 	double acre(Location loc1, Location loc2, Location loc3);
 };
+
+class Candidate
+{
+private:
+	std::string code, name, birth;
+	float math, lite, eng;
+public:
+	Candidate();
+	Candidate(std::string code, std::string name, std::string birthday, double math_score, double literature_score, double english_score);
+	friend std::istream& operator >>(std::istream& dInput, Candidate& cdi0);
+	friend std::ostream& operator <<(std::ostream& dOutput, Candidate cdi0);
+	std::string getCode() const;
+	std::string getName() const;
+	std::string getBirthday() const;
+	double getMathScore() const;
+	double getLiteratureScore() const;
+	double getEnglishScore() const;
+};
+
+class TestCandidate
+{
+private:
+	int n;
+	Candidate* cdi0;
+public:
+	TestCandidate(int n);
+	~TestCandidate();
+	void inputCandidates();
+	void printGoodCandidates();
+};
+
+class c_Num
+{
+private:
+	int re, vi; //số thực, số ảo
+public:
+	c_Num();
+	friend std::istream& operator >>(std::istream& dInput, c_Num& n0);
+	friend std::ostream& operator <<(std::ostream& dOutput, c_Num n0);
+	c_Num(int, int);
+	friend c_Num operator+(c_Num n1, c_Num n2);
+	friend c_Num operator-(c_Num n1, c_Num n2);
+	friend c_Num operator*(c_Num n1, c_Num n2);
+	friend c_Num operator/(c_Num n1, c_Num n2);
+};
+
+class m_Table
+{
+private:
+	int m, n;
+public:
+	m_Table();
+	friend std::istream& operator >>(std::istream& dInput, m_Table& tab0);
+	void print();
+	void print(m_Table);
+	void printT();
+};

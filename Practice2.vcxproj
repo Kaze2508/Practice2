@@ -127,9 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Candidate.cpp" />
+    <ClCompile Include="c_Num.cpp" />
     <ClCompile Include="Fraction.cpp" />
     <ClCompile Include="Location.cpp" />
+    <ClCompile Include="m_Table.cpp" />
     <ClCompile Include="Practice2.cpp" />
+    <ClCompile Include="TestCandidate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Practice2.h" />
